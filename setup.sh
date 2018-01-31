@@ -18,6 +18,10 @@ cd ~/
 mkdir jdk
 cd ./jdk/
 
+# Install OpenJDK since java.net is down
+yum install java-1.8.0-openjdk -y
+echo 'JAVA_HOME="/usr/lib/jvm/jre-openjdk"' >> /etc/environment
+source /etc/environment
 
 # Install Elasticsearch
 wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.6.5.rpm
